@@ -102,7 +102,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             mysqli_close($db);
 
             if($bandera){
-                $_SESSION['usuario'] = $nombre;
+                $_SESSION['nombre'] = $nombre;
+                $_SESSION['correo'] = $mailTyped;
                 switch($rol){
                     case 'lector':
                         echo"<script>window.location.replace('lector.php');</script>";
