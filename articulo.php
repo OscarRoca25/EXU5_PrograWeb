@@ -169,15 +169,15 @@ if (isset($_POST['submit'])) {
                                     $nombreL = $lector["nombre"];
                                     $apellidosL = $lector["apellidos"];
                                     ?>
-                                    </br>
                                     <p><pre style="color: white">___________________________________________________________________________________________</pre></p>
                                     <p><pre  style="color: white; font-size:18px"><strong><?php echo $nombreL?> <?php echo $apellidosL?></strong> (<?php echo $correoC ?>)</pre></p>
                                     <p style="color: white; padding:0px"><?php echo $contenidoC ?></p>
-                                    <p><pre style="color: white">___________________________________________________________________________________________</pre></p>
-                                    </br>
                                     <?php
                                 }
                             }
+                            ?>
+                            <p><pre style="color: white">___________________________________________________________________________________________</pre></p>
+                            <?php
                         } else {
                             echo '<p>No hay comentarios</p>';
                         }
