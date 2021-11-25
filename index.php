@@ -1,6 +1,3 @@
-
-
-
 <!doctype html>
 <html lang="en">
 
@@ -21,45 +18,48 @@
         require_once 'templates/header.php';
         ?>
 
+
         <?php
         require_once 'templates/formulario.php';
         ?>
+        
 
-<div id="carouselExampleIndicators" class="carousel slide justify-content-center" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner justify-content-center">
-            <div class="carousel-item active justify-content-center">
-                <img class="d-block w-100" src="img/articulo1.jpg" alt="First slide">
+
+        <div id="carouselExampleIndicators" class="carousel slide justify-content-center" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner justify-content-center">
+                <div class="carousel-item active justify-content-center">
+                <a href="articulo1.php"><img class="d-block w-100" src="img/articulo1.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item justify-content-center">
+                <a href="articulo2.php"><img class="d-block w-100" src="img/articulo2.jpg" alt="Second slide ">
+                </div>
+                <div class="carousel-item justify-content-center">
+                    <a href="articulo3.php"><img class="d-block w-100" src="img/articulo3.jpg" alt="Third slide"> </a>
+                </div>
             </div>
-            <div class="carousel-item justify-content-center">
-                <img class="d-block w-100" src="img/articulo2.jpg" alt="Second slide ">
-            </div>
-            <div class="carousel-item justify-content-center">
-                <a href="https://www.youtube.com/watch?v=ktNgKSnMEB8&t=10s"><img  class="d-block w-100" src="img/articulo3.jpg" alt="Third slide" > </a>
-            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-    <br>
+        <br>
 
         <?php
-        require_once 'templates/footer.php';
+        require_once 'includes/footer.php';
         ?>
 
     </div>
 
-    
+
 
 
 

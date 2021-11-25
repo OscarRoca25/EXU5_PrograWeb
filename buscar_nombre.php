@@ -21,15 +21,13 @@
         <nav class="navbar justify-content-end navbar-dark bg-dark" style="margin-top: -25px;">
 
             <button id="botoncito" type="button" class="btn btn-secondary btn-lg"><a class="badge badge-secondary" href="index.php">Inicio</a></button>
-            <nav class="navbar navbar-dark bg-dark">
-                <form class="form-inline" method="get">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar por nombre" aria-label="Search" name="barra">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="boton_buscar">Buscar</button>
-                </form>
-            </nav>
+
 
         </nav>
-        <div id="contenendorformulario" class="container" style="background-color: rgb(161, 217, 255); ">
+</br>
+
+ 
+        <div id="contenendorformulario" class="container" style="background-color: rgb(161, 217, 255);">
             <header class="card-header  text-center ">
                 <h1 class=" p-3">Articulos por Nombre</h1>
             </header>
@@ -49,10 +47,11 @@
                     $usuarioBD = "uww4txp33fwtwsd3";
                     $pwBD = "SOScyNtal6c2jEyoSEAz";
                     $nomBD = "bjmpkkoiv1c5rd7kgm65";
-                    $db = mysqli_connect($servidor, $usuarioBD, $pwBD, $nomBD);
+                    $db = mysqli_connect($servidor, $usuarioBD, $pwBD, $nomBD);   
 
-                    if (isset($_GET['boton_buscar'])) {
-                        $busqueda = $_GET['barra'];
+                    $busqueda = $_GET['barra'];
+                                      
+
                         $sql = "SELECT id_articulo, titulo, subtitulo, correo, fecha_publicacion, categoria FROM articulos WHERE titulo = '$busqueda'";
                         $resultado = mysqli_query($db, $sql);
                         while ($row = $resultado->fetch_array()) {
@@ -62,37 +61,37 @@
                             $Correo = $row['correo'];
                             $Fecha_publicacion = $row['fecha_publicacion'];
                             $Categoria = $row['categoria'];
-                            ?>
-                                        <tr>
-                                            <td>
-                                                <?php echo $Titulo ?>
-                                            </td>
-            
-                                            <td>
-                                                <?php echo $Subtitulo ?>
-                                            </td>
-            
-                                            <td>
-                                                <?php echo $Correo ?>
-                                            </td>
-                                            <td>
-                                                <?php echo $Fecha_publicacion ?>
-                                            </td>
-            
-                                            <td>
-                                                <?php echo $Categoria ?>
-                                            </td>
-                                            <td>
-                                                <a href="ver.php?id=<?php echo $Id_articulo ?>" class="button"><strong>Ver</strong></a>
-                                            </td>
-            
-                                        </tr>
-                                <?php
-            
-                                    }
-                                }
-                                ?>
-                            
+                    ?>
+                            <tr>
+                                <td>
+                                    <?php echo $Titulo ?>
+                                </td>
+
+                                <td>
+                                    <?php echo $Subtitulo ?>
+                                </td>
+
+                                <td>
+                                    <?php echo $Correo ?>
+                                </td>
+                                <td>
+                                    <?php echo $Fecha_publicacion ?>
+                                </td>
+
+                                <td>
+                                    <?php echo $Categoria ?>
+                                </td>
+                                <td>
+                                    <a href="ver.php?id=<?php echo $Id_articulo ?>" class="button"><strong>Leer</strong></a>
+                                </td>
+
+                            </tr>
+                    <?php
+
+                        }
+                    
+                    ?>
+
 
 
 
@@ -100,8 +99,6 @@
                 </tbody>
             </table>
         </div>
- 
-
 
 
         <script>
@@ -109,13 +106,15 @@
                 $("#formulario").removeAttr("hidden");
             }
         </script>
+
+<?php
+        require_once 'includes/footer.php';
+        ?>
     </div>
 
 
 
-    <?php
-        require_once 'templates/footer.php';
-        ?>
+
 
 
 

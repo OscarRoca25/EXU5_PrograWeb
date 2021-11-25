@@ -23,14 +23,10 @@
         <nav class="navbar justify-content-end navbar-dark bg-dark" style="margin-top: -25px;">
 
             <button id="botoncito" type="button" class="btn btn-secondary btn-lg"><a class="badge badge-secondary" href="index.php">Inicio</a></button>
-            <nav class="navbar navbar-dark bg-dark">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar por nombre" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-            </nav>
+            
 
         </nav>
+</br>
         <div id="contenendorformulario" class="container" style="background-color: rgb(161, 217, 255); ">
             <header class="card-header  text-center ">
                 <h1 class=" p-3">Articulo</h1>
@@ -140,30 +136,33 @@
 
                 </tbody>
             </table>
+
         </div>
-
-
-
-        <script>
-            function muestraForm() {
-                $("#formulario").removeAttr("hidden");
-            }
-        </script>
-    </div>
-
-
-
-        <script>
-            function muestraForm() {
-                $("#formulario").removeAttr("hidden");
-            }
-        </script>
-    </div>
-
-
-    <?php
+        <?php
         require_once 'templates/footer.php';
         ?>
+
+
+
+        <script>
+            function muestraForm() {
+                $("#formulario").removeAttr("hidden");
+            }
+        </script>
+    </div>
+
+
+
+        <script>
+            function muestraForm() {
+                $("#formulario").removeAttr("hidden");
+            }
+        </script>
+
+    </div>
+
+
+
 
 
 
