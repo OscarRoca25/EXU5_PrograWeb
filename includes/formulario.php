@@ -22,7 +22,7 @@
                             <label id="lblError" class="error"></label><br>
                             <label style="font-size: 18px;"><i class="fa fa-user"></i> Usuario </label>
                             <input type="mail" class="form-control" required id="usuario" title="El correo debe ser example@gmail.com"
-                                    name="usuario" placeholder="Usuario" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}" />
+                                    name="usuario" placeholder="Usuario" pattern="[a-zA-Z0-9_-.]+@[a-zA-Z0-9-]{2,}[.][a-zA-Z]{2,4}" />
                             <label id="errorUsuario" class="error"></label>
                             <br>
                             <label style="font-size: 18px;"><i class="fa fa-lock"></i> Contraseña </label>
