@@ -43,7 +43,7 @@
                     $pwBD = "SOScyNtal6c2jEyoSEAz";
                     $nomBD = "bjmpkkoiv1c5rd7kgm65";
                     $db = mysqli_connect($servidor, $usuarioBD, $pwBD, $nomBD);                                            
-                        $sql = "SELECT id_articulo, titulo, subtitulo, correo, fecha_publicacion, categoria FROM articulos WHERE categoria = 'Revición'";
+                        $sql = "SELECT id_articulo, titulo, subtitulo, correo, fecha_publicacion, categoria FROM articulos WHERE categoria = 'Revisión'";
                         $resultado = mysqli_query($db, $sql);
                         if ($resultado) {
                         while ($row = $resultado->fetch_array()) {
