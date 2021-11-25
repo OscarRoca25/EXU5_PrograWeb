@@ -15,9 +15,11 @@
 
 <body style="background-image: url('img/fondo.jpg'); background-attachment:fixed; background-size:cover;";>
     <div class="container">
-        <?php
-        require_once 'includes/header.php';
-        ?>
+       
+<div align="center" style="background-image: url('img/fondo_header.jpg'); background-size:cover; 
+padding-top: 20px; padding-bottom: 40px; margin-bottom: 30px; margin-top: 20px">
+    <h1 style="color:white">Agujeros Negros</h1>
+    </div>
 
         <?php
         require_once 'includes/formulario.php';
@@ -72,7 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }else{
         mysqli_query($db, "SET NAMES 'UTF8'");
     }
-    $sql = "SELECT * FROM usuarios WHERE correo = '".$mailTyped."'";
+    $sql = "SELECT * FROM usuarios WHERE correo = '$mailTyped'";
 
             $resultados = mysqli_query($db, $sql);
 
